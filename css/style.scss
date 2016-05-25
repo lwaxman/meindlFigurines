@@ -157,14 +157,16 @@ section{
 		}
 	}
 	.images{
+		// border: 2px solid blue;
 		text-align: center;
 		padding: 2rem 0 1rem 0;
 		width: 100vw;
 		position: relative; 
-		// border: 1px solid red;
 		right: 40vw;
 		img{
 			width: 40vw;
+			// height: 800px;
+			// width: auto;
 		}
 
 	}
@@ -181,3 +183,130 @@ section.background1{
 section.background2{
 	background: linear-gradient(to top, #eee, #fff);
 }
+
+/**************************************************** MOBILE */
+@media only screen and (max-device-width: 480px){
+	header{
+		.background{
+			.leftImage{
+				background: $colourTwo;
+				width: 100vw; 
+				height: 100vh;
+				img{
+					opacity: 0.5;
+				}
+			}
+			.rightImage{
+				display: none;
+			}
+		}
+		.content{
+			width: 80vw; 
+			left: 0px; 
+			h1{
+				font-size: 6.2rem;
+			}
+			h2{
+				font-size: 4rem;
+			}
+			#menu{
+				width: 100vw;
+			}
+			li{
+				border-top: 5px solid white;
+				font-size: 2.6rem;
+			}
+			li:hover{
+				border-top: 5px solid $colourOne;
+			}
+		}
+	}
+	section .content{
+		width: 80vw;
+		left: 10vw;
+		p{
+			width: 100%;
+			padding-right: 0px;
+		}
+		h2{
+			position: relative;
+			left: 0px;
+			text-align: left;
+			width: 100%;
+		}
+		.images{
+			left: -10vw; 
+			img{
+				width: 80vw;
+			}
+
+		}
+	}
+}
+
+/**************************************************** SMALLER SCREENS */
+
+@media only screen and (max-width: 900px){
+	header{
+		.background{
+			.leftImage{
+				background: $colourTwo;
+				width: 100vw; 
+				height: 100vh;
+				img{
+					opacity: 0.4;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.rightImage{
+				display: none;
+			}
+		}
+		.content{
+
+			text-align: right;
+			width: 80vw; 
+			left: 20vw; 
+			h1, h2{
+				right: 0px;
+			}
+			#menu{
+				width: 100%;
+			}
+		}
+	}
+	section .content{
+		width: 80vw;
+		left: 10vw;
+		p{
+			width: 100%;
+			padding-right: 0px;
+		}
+		h2{
+			position: relative;
+			left: 0px;
+			text-align: left;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+		.images{
+			left: -10vw; 
+		}
+	}
+}
+
+/**************************************************** BIGGER SCREENS */
+
+@media only screen and (min-width: 1400px){
+	section .content{
+		p{
+			position: relative;
+			width: 800px;
+		}
+		h2{
+			width: 400px;
+		}
+	}
+}
+
