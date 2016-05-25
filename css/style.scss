@@ -161,7 +161,7 @@ section{
 		padding: 2rem 0 1rem 0;
 		width: 100vw;
 		position: relative; 
-		border: 1px solid red;
+		// border: 1px solid red;
 		right: 40vw;
 		img{
 			width: 40vw;
@@ -175,9 +175,9 @@ section{
 }
 
 section.background1{
-	background: linear-gradient(to top, #FFF9CC, #fff);
+	background: linear-gradient(to top, #eee, #fff);
 }
 
 section.background2{
-	background: linear-gradient(to top, #FFF9CC, #fff);
+	background: linear-gradient(to top, #eee, #fff);
 }
