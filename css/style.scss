@@ -11,12 +11,12 @@ body{
 
 @font-face{
 	font-family: "Title";
-	src: url("/fonts/LinLibertine_DR.ttf");
+	src: url("/assets/LinLibertine_DR.ttf");
 }
 
 @font-face{
 	font-family: "Paragraph";
-	src: url("/fonts/Aileron-Light.otf");
+	src: url("/assets/Aileron-Light.otf");
 }
 
 /******************************************************************/
@@ -25,13 +25,13 @@ $colourTwo: #0059D4;
 
 
 h1{
-	font-family: "Title";
+	font-family: "Title", "Georgia", "Times", serif;
 	font-size: 6.0em;
 	letter-spacing: 0.03em;
 }
 
 h2{
-	font-family: "Title";
+	font-family: "Title", "Georgia", "Times", serif;
 	font-size: 3.4em;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
@@ -119,7 +119,9 @@ header{
 			color: white;
 			text-decoration: none;
 		}
-		li:hover a{
+		li:hover a,
+		li:hover{
+			cursor: pointer;
 			color: $colourOne;
 		}
 		li:hover{
@@ -127,6 +129,8 @@ header{
 		}
 	}
 }
+
+
 
 section{
 	$contentWidth: 60vw;
@@ -202,6 +206,125 @@ section{
 	.colour{
 		color: $colourTwo;
 	}
+}
+
+
+section#header{
+	padding-top: 40px;
+	background: white;
+	padding-bottom: 40px;
+	background: url(../images/header/fundy_narrow_long.jpg);
+	background-size: 100%;
+	a{
+		width: 100%;
+		height: 100%;
+		background: red;
+		text-decoration: none;
+		h1, h2{
+			color: $colourTwo;
+			background: white;
+			padding: 0 1rem;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		h1{
+			font-size: 4em;
+		}
+		h2{
+			font-size: 2.5em;
+		}
+	}	
+}
+
+section#guestBook{
+	p{
+		margin-bottom: 50px;
+	}
+	form{
+		font-family: 'Title';
+		span{
+			position: relative;
+			color: $colourTwo;
+			font-size: 1.6em;
+		}
+		input{
+			width: 15rem;
+			padding: 5px;
+			font-family: 'Paragraph';
+			font-size: 1.6em;
+			margin-bottom: 20px;
+		}
+		div#submit{
+			position: absolute;
+			width: 80px;
+			padding: 5px;
+			letter-spacing: 1px;
+			font-family: 'Paragraph';
+			text-align: center;
+			font-size: 1.6em;
+			background: $colourTwo;
+			color: white;
+			right:12vw;
+			bottom: -40px;
+		}
+		div#submit:hover{
+			border-top: 2px solid $colourTwo;
+			color: $colourTwo;
+			background: $colourOne;
+			cursor: pointer;
+		}
+		textarea{
+			width: 80%;
+			padding: 5px;
+			font-family: 'Paragraph';
+			font-size: 1.6em;
+		}
+		
+	}
+}
+
+
+#messages{
+	width: 80vw;
+	margin: 0 auto;
+	div{
+		border-top: 2px solid $colourTwo;
+		margin-top: 50px;
+		margin-bottom: 150px;
+		p{
+			display: inline-block;
+			vertical-align: top;
+		}
+		p.who{
+			width: 20%;
+			color: $colourTwo;
+			font-family: "Title", "Georgia", "Times", serif, "Georgia", "Times", serif;
+			// background: blue;
+		}
+		p.comment{
+			letter-spacing: 1px;
+			padding-left: 5%;
+			width: 75%;
+			// background: red;
+		}
+	}
+}
+
+section.guestBook{
+	background: $colourTwo;
+	color: white;
+	text-align: center;
+	p a{
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid white;
+	}
+	p a:hover{
+		background: $colourOne;
+		color: $colourTwo;
+		border-bottom: 1px solid $colourTwo;
+	}
+
 }
 
 /**************************************************** MOBILE */
@@ -334,6 +457,20 @@ section{
 		}
 		.images{
 			left: -10vw; 
+		}
+	}
+	section#header{
+		background: url(../images/header/fundy_narrow_short.jpg);
+		background-size: 100%;
+	}
+	section#guestBook{
+		form{
+			textarea{
+				width: 100%;
+			}
+			#submit{
+				left: 0;
+			}
 		}
 	}
 }

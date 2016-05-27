@@ -9,18 +9,18 @@ body {
 
 @font-face {
   font-family: "Title";
-  src: url("/fonts/LinLibertine_DR.ttf"); }
+  src: url("/assets/LinLibertine_DR.ttf"); }
 @font-face {
   font-family: "Paragraph";
-  src: url("/fonts/Aileron-Light.otf"); }
+  src: url("/assets/Aileron-Light.otf"); }
 /******************************************************************/
 h1 {
-  font-family: "Title";
+  font-family: "Title", "Georgia", "Times", serif;
   font-size: 6.0em;
   letter-spacing: 0.03em; }
 
 h2 {
-  font-family: "Title";
+  font-family: "Title", "Georgia", "Times", serif;
   font-size: 3.4em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -91,7 +91,9 @@ header {
     header .content li a {
       color: white;
       text-decoration: none; }
-    header .content li:hover a {
+    header .content li:hover a,
+    header .content li:hover {
+      cursor: pointer;
       color: #FFCE00; }
     header .content li:hover {
       border-top: 2px solid #FFCE00; }
@@ -153,6 +155,97 @@ section {
     border-left: 2px solid #0059D4; }
   section .colour {
     color: #0059D4; }
+
+section#header {
+  padding-top: 40px;
+  background: white;
+  padding-bottom: 40px;
+  background: url(../images/header/fundy_narrow_long.jpg);
+  background-size: 100%; }
+  section#header a {
+    width: 100%;
+    height: 100%;
+    background: red;
+    text-decoration: none; }
+    section#header a h1, section#header a h2 {
+      color: #0059D4;
+      background: white;
+      padding: 0 1rem;
+      display: inline-block;
+      margin-bottom: 10px; }
+    section#header a h1 {
+      font-size: 4em; }
+    section#header a h2 {
+      font-size: 2.5em; }
+
+section#guestBook p {
+  margin-bottom: 50px; }
+section#guestBook form {
+  font-family: 'Title'; }
+  section#guestBook form span {
+    position: relative;
+    color: #0059D4;
+    font-size: 1.6em; }
+  section#guestBook form input {
+    width: 15rem;
+    padding: 5px;
+    font-family: 'Paragraph';
+    font-size: 1.6em;
+    margin-bottom: 20px; }
+  section#guestBook form div#submit {
+    position: absolute;
+    width: 80px;
+    padding: 5px;
+    letter-spacing: 1px;
+    font-family: 'Paragraph';
+    text-align: center;
+    font-size: 1.6em;
+    background: #0059D4;
+    color: white;
+    right: 12vw;
+    bottom: -40px; }
+  section#guestBook form div#submit:hover {
+    border-top: 2px solid #0059D4;
+    color: #0059D4;
+    background: #FFCE00;
+    cursor: pointer; }
+  section#guestBook form textarea {
+    width: 80%;
+    padding: 5px;
+    font-family: 'Paragraph';
+    font-size: 1.6em; }
+
+#messages {
+  width: 80vw;
+  margin: 0 auto; }
+  #messages div {
+    border-top: 2px solid #0059D4;
+    margin-top: 50px;
+    margin-bottom: 150px; }
+    #messages div p {
+      display: inline-block;
+      vertical-align: top; }
+    #messages div p.who {
+      width: 20%;
+      color: #0059D4;
+      font-family: "Title", "Georgia", "Times", serif, "Georgia", "Times", serif; }
+    #messages div p.comment {
+      letter-spacing: 1px;
+      padding-left: 5%;
+      width: 75%; }
+
+section.guestBook {
+  background: #0059D4;
+  color: white;
+  text-align: center; }
+  section.guestBook p a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white; }
+  section.guestBook p a:hover {
+    background: #FFCE00;
+    color: #0059D4;
+    border-bottom: 1px solid #0059D4; }
 
 /**************************************************** MOBILE */
 @media only screen and (max-device-width: 480px) {
@@ -246,7 +339,16 @@ section {
       width: 100%;
       margin-bottom: 50px; }
     section .content .images {
-      left: -10vw; } }
+      left: -10vw; }
+
+  section#header {
+    background: url(../images/header/fundy_narrow_short.jpg);
+    background-size: 100%; }
+
+  section#guestBook form textarea {
+    width: 100%; }
+  section#guestBook form #submit {
+    left: 0; } }
 /**************************************************** BIGGER SCREENS */
 @media only screen and (min-width: 1400px) {
   section .content p {

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Meindl Figurines</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    	<section id="header">
+	    	<a href="../">
+	    		<h1>Elfriede Meindl</h1><br>
+	    		<h2>Meindl Figurines</h2>
+    		</a>
+    	</section>
+    	<section id="guestBook">
+    		<div class="content alignRight">
+    			<h2>Guest Book</h2>
+	    		<p>We would greatly enjoy hearing your stories and comments about Elfreide and her figurines. Please, leave us a message below.</p>
+	    		<form>
+	    			<span id="nameLabel">name</span><br>
+	    			<input type='text' name='name' id='name'/><br>
+	    			<span id="messageLabel">message</span><br>
+	    			<textarea type='text' name='message' rows='10' id='message'/></textarea>
+	    			<div id="submit">submit</div>
+	    		</form>
+    		</div>
+    	</section>
+		<div id="messages"></div>
+	
+        <script>
+	        var jsonData;
+        	window.onload = function(){
+
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open('GET', 'assets/messages.json');
+				xmlhttp.onreadystatechange = function(){
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+						var eco = JSON.parse(xmlhttp.responseText);
+						jsonData = JSON.parse(xmlhttp.responseText);
+						jsonData.messages.reverse();
+						for(var m in jsonData.messages){
+							
+							var div = document.createElement("div");
+
+							var name = jsonData.messages[m].name;
+							var date = jsonData.messages[m].date;
+							var who = document.createElement("p");
+							who.setAttribute("class", "who");
+							who.innerHTML = name + "<br>" + date;
+
+							var comment = document.createElement("p");
+							comment.setAttribute("class", "comment");
+							comment.innerHTML = jsonData.messages[m].comment;
+
+							div.appendChild(who);
+							div.appendChild(comment);
+
+							var com = document.getElementById("messages");
+							com.appendChild(div);
+						}
+						jsonData.messages.reverse();
+					}
+				};
+				xmlhttp.send();
+			};
+
+			var submit = document.getElementById("submit");
+
+			submit.onclick = function(){
+				var m = document.getElementById("message").value;
+				var n = document.getElementById("name").value;
+				var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				var today = new Date();
+			    var day = today.getDate();
+			    var month = monthNames[ today.getMonth()] ;
+			    if(day<10) day = "0"+day;
+			    var d =  day +" "+ month +" "+ today.getFullYear();
+				if(m!==""){
+					if(n==="") n="Anonymous";
+					console.log(jsonData, n, m, d);
+					var newComment = {
+						name: n,
+						date: d,
+						comment: m
+					};
+					jsonData.messages.push(newComment);
+					console.log(jsonData);
+
+					var xmlhttp = new XMLHttpRequest();
+					var data = "data="+JSON.stringify(jsonData);
+					xmlhttp.open("POST", "assets/save.php", true);
+					xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					xmlhttp.onreadystatechange = function(){
+						if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+						 	console.log("done");
+						}
+					};
+					xmlhttp.send(data);
+
+					document.getElementById("message").value = "";
+					document.getElementById("name").value = "";
+				}
+			};
+
+        </script>
+    </body>
+</html>

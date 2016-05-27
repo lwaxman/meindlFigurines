@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>index</title>
+        <title>Meindl Figurines</title>
         <link rel="stylesheet" href="css/style.css">
-        <script href="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
     </head>
     <body>
     	<header>
@@ -19,17 +19,17 @@
                 <h1>Elfriede Meindl</h1><br>
                 <h2>Meindl Figurines</h2>
                 <ul id="menu">
-                    <li><a href="#biography">Biography</a></li><br>
-                    <li><a href="#tourists">Tourists and Gift Shops</a></li><br>
-                    <li><a href="#craftMarkets">Craft Markets in Nova Scotia</a></li><br>
-                    <li><a href="#world">Meindl Figurines all over the world</a></li><br>
-                    <li><a href="#mentor">A Mentor to Others</a></li><br>
-                    <li><a href="#legends">Legends and tales of Nova Scotia</a></li><br>
-                    <li><a href="#protocol">The Protocol Years</a></li><br>
-                    <li><a href="#christopher">&ldquo;Christopher&rdquo; by Elfriede Meindl</a></li><br>
-                    <li><a href="#original">&ldquo;Meindl Original&rdquo;&mdash;Hand made and Unique</a></li><br>
-                    <li><a href="#dedication">Dedication</a></li><br>
-                    <li><a href="#guestBook">Guest Book</a></li><br>
+                    <li id="menu_biography">Biography</li><br>
+                    <li id="menu_tourists">Tourists and Gift Shops</li><br>
+                    <li id="menu_craftMarkets">Craft Markets in Nova Scotia</li><br>
+                    <li id="menu_world">Meindl Figurines all over the world</li><br>
+                    <li id="menu_mentor">A Mentor to Others</li><br>
+                    <li id="menu_legends">Legends and tales of Nova Scotia</li><br>
+                    <li id="menu_protocol">The Protocol Years</li><br>
+                    <li id="menu_christopher">&ldquo;Christopher&rdquo; by Elfriede Meindl</li><br>
+                    <li id="menu_meindlOriginal">&ldquo;Meindl Original&rdquo;&mdash;Hand made and Unique</li><br>
+                    <li id="menu_dedication">Dedication</li><br>
+                    <li><a href="guestBook.html">Guest Book</a></li>
                 </ul>
             </div>
         </header>
@@ -45,7 +45,7 @@
                 </div>
                 <p class="caption">Arabian dancer,<br>Balinese girl</p>
                 <p>After a few years their two eldest children, Susan and Patricia were born. Rolf became involved in the union movement in his trade and soon, with the encouragement of their pastor, he decided to manifest his interest in social service and train to become a Lutheran Minister. The couple sold their house and moved to Waterloo, Ontario where Rolf enrolled for five years in the seminary at Waterloo Lutheran University. The couple’s other two children, Carol and Rolf Jr. were born during his studies and Elfriede used every ounce of her native creativity to create a happy and fulfilling family life with few resources.</p>
-                <p>During this period she had little time to devote to her artistic work but she remembers fondly receiving a special commission to sculpt the head of a young boy from life. Convincing him to sit still was a challenge and she was particularly proud of the liveliness of his face and how well she modeled his curls (of which his hair-stylist mother was particularly proud!). </p>
+                <p>During this period she had little time to devote to her artistic work but she remembers fondly receiving a special commission to sculpt the head of a young boy from life. Convincing him to sit still was a challenge and she was particularly proud of the liveliness of his face and how well she modeled his curls (of which his hair-stylist mother was particularly proud!).</p>
                 <p>In 1965 Rolf graduated from seminary and received a call to join a team ministry in New Germany, Nova Scotia. It was here that Elfriede's creative life really rooted itself and flourished. </p>
             </div>
     	</section>
@@ -72,7 +72,7 @@
         <section id="craftMarkets">
             <div class="content alignRight">
                 <h2>Craft Markets <br>in Nova Scotia</h2>
-                <p>The next stage in Elfriede’s career development was participation in the growing circuit of Nova Scotia craft markets. As the craft markets became a more and more popular attraction, it was hard for Elfriede’s stock of individually modeled figures to keep up and she usually sold out before the end of the show. Another happy and long-standing  craft connection, was created when Donna and Michael Susnick, who were then craftspeople themselves, invited colleagues like Elfriede to join them in  establishing one of the largest, most successful and longest running craft shows in the province, “Christmas at the Forum” in Halifax, and it’s  counterpart “Spring into Summer” </p>
+                <p>The next stage in Elfriede’s career development was participation in the growing circuit of Nova Scotia craft markets. As the craft markets became a more and more popular attraction, it was hard for Elfriede’s stock of individually modeled figures to keep up and she usually sold out before the end of the show. Another happy and long-standing  craft connection, was created when Donna and Michael Susnick, who were then craftspeople themselves, invited colleagues like Elfriede to join them in  establishing one of the largest, most successful and longest running craft shows in the province, “Christmas at the Forum” in Halifax, and it’s  counterpart “Spring into Summer.”</p>
                 <p>It was also during this period that Elfriede’s children became old enough to create work of their own, their first childish attempts being given space on the corner of the table. Over the years Meindl Figurines developed into a three person family business as Elfriede’s two daughters Susan and Carol also opened their own studios and worked full-time, creating their own distinct stocks of characters.</p>
                 <p>Craft markets became family events as all 4 children and their parents worked collaboratively to set up, take down and staff the family craft show booths at the Forum, the Dalplex , the Annapolis Royal Craft Market, the Lunenburg Craft market as well as many other shows in Truro, New Glasgow, and Cape Breton.</p>
             </div>
@@ -96,7 +96,7 @@
         <section id="legends">
             <div class="content alignRight WASLEFT">
                 <h2>Legends and tales <br>of Nova Scotia</h2>
-                <p>While her business of creating small original figurines for sale occupied most of her time, in quiet moments Elfriede  still found time to pursue her artistic inclinations. Always a story teller herself, she was fascinated by the legends and folktales of Nova Scotia. She found a real treasure trove of these stories  when she was given the gift of an old  Grade 5 Reader from 1891 “Stories from the Land of Evangaline”, which featured Nova Scotian legends and folk-tales. These stories captured her imagination and became the inspiration for her larger and more elaborate ceramic sculptures. Among the “big figurines” that she created over the years are, “Ulrica”, who walked from Lunenberg to Grand Pre alone to get a cow after the expulsion of the Acadians, “The Messenger Maiden of Minas“ and “The Light on Black Ledge.”</p>
+                <p>While her business of creating small original figurines for sale occupied most of her time, in quiet moments Elfriede  still found time to pursue her artistic inclinations. Always a story teller herself, she was fascinated by the legends and folktales of Nova Scotia. She found a real treasure trove of these stories  when she was given the gift of an old  Grade 5 Reader from 1891 “Stories from the Land of Evangaline,” which featured Nova Scotian legends and folk-tales. These stories captured her imagination and became the inspiration for her larger and more elaborate ceramic sculptures. Among the “big figurines” that she created over the years are, “Ulrica”, who walked from Lunenberg to Grand Pre alone to get a cow after the expulsion of the Acadians, “The Messenger Maiden of Minas“ and “The Light on Black Ledge.”</p>
                 <div class="images">
                     <img src="images/legends/Ulrica.jpg" alt="Ulrica"><img src="images/legends/peter-barnes.jpg" alt="The Light on Black Ledge"><img src="images/legends/messenger-maiden-of-minas.jpg" alt="The Messenger Maiden of Minas">
                 </div>
@@ -174,10 +174,64 @@
                 <p>This website has been created by Elfriede Meindl’s children with love and admiration and in honor of her 90th birthday. It is our tribute to our mother, Elfriede Meindl’s, talent and imagination</p>
                 <p>Thanks to Elfriede's granddaughter, <a href="http://lauriewaxman.com">Laurie Waxman</a>, for the website design and development.</p>
                 <p class="colour">ABSOLUTELY NO APPRAISALS WILL BE MADE.</p>
-                <p class="colour">While we would enjoy hearing your stories and comments about Meindl Figurines in the <a href="guestBook.php">Guest Book</a>, Mrs. Meindl will offer no identification, authentication or price appraisal of her work. No figurines are for sale through this website.</p>
+                <p class="colour">While we would enjoy hearing your stories and comments about Meindl Figurines in the <a href="guestBook.html">Guest Book</a>, Mrs. Meindl will offer no identification, authentication or price appraisal of her work. No figurines are for sale through this website.</p>
             </div>
         </section> 
-        section class=
-		
+        <section class="guestBook">
+            <p>Leave a comment in the <a href="guestBook.html">Guest Book</a>.</p>
+        </section>
+		<script>
+
+        $("#menu_biography").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#biography").offset().top
+            }, 600);
+        });
+        $("#menu_tourists").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#tourists").offset().top
+            }, 600);
+        });
+        $("#menu_craftMarkets").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#craftMarkets").offset().top
+            }, 1000);
+        });
+        $("#menu_world").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#world").offset().top
+            }, 1000);
+        });
+        $("#menu_mentor").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#mentor").offset().top
+            }, 1500);
+        });
+        $("#menu_legends").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#legends").offset().top
+            }, 1500);
+        });
+        $("#menu_protocol").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#protocol").offset().top
+            }, 2000);
+        });
+        $("#menu_christopher").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#christopher").offset().top
+            }, 2000);
+        });
+        $("#menu_meindlOrginal").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#meindlOrginal").offset().top
+            }, 2000);
+        });
+        $("#menu_dedication").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#dedication").offset().top
+            }, 2000);
+        });
+        </script>
     </body>
 </html>
