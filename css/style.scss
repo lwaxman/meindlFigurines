@@ -43,6 +43,11 @@ p{
 	font-size: 1.8em;
 	letter-spacing: 0.03em;
 	margin-top: 1em;
+	line-height: 1.5rem;
+}
+
+p.caption{
+	line-height: 1.2rem;
 }
 
 img{
@@ -53,7 +58,6 @@ img{
 /******************************************************************/
 
 header{
-	background: #999;
 	width: 100%;
 	height: 100%;
 	color: $colourTwo;
@@ -66,23 +70,19 @@ header{
 			overflow: hidden;
 		}
 		.leftImage{
-			// background: $colourOne;
+			background: url(../images/header/texture.jpg);
+			background-size: 100%;
 			text-align: right;
-			img{
-				opacity: 0.8;	
-			}
 		}
 		.rightImage{
 			background: $colourTwo;
 			text-align: left;
 			img{
-				opacity: 0.5;	
+				opacity: 0.4;	
 			}
 		}
 		img{
 			height:100vh; 
-			filter: grayscale(100%);
-			-webkit-filter: grayscale(100%);
 			width: auto; 
 			text-align: center;
 			vertical-align: center;
@@ -121,7 +121,6 @@ header{
 		}
 		li:hover a{
 			color: $colourOne;
-			// cursor: pointer;
 		}
 		li:hover{
 			border-top: 2px solid $colourOne;
@@ -136,6 +135,8 @@ section{
 	display: inline-block;
 	width: 100%; 
 	padding: 4rem 0 5rem 0;
+	background: linear-gradient(to top, #eee, #fff);
+
 	.content{
 		width: $contentWidth;
 	}
@@ -144,6 +145,26 @@ section{
 		left: 40vw;
 		p{
 			padding-right: $margin;
+			a{
+				text-decoration: none;
+				border-bottom: 1px solid $colourTwo;
+				color: $colourTwo;
+			}
+			a:hover{
+				background: $colourOne;
+				// color: white;
+			}
+		}
+		p.caption{
+			position: absolute;
+			text-align: right;
+			left: -30vw;
+			width: 28vw;
+			padding-right: 0px;
+			color: $colourTwo;
+			font-size: 1.4em;
+			margin-top: 1em;
+			margin-bottom: 3em;
 		}
 		h2{
 			border-top: 3px solid $colourTwo;
@@ -157,31 +178,30 @@ section{
 		}
 	}
 	.images{
-		// border: 2px solid blue;
 		text-align: center;
-		padding: 2rem 0 1rem 0;
+		margin: 2rem 0 0rem 0;
 		width: 100vw;
 		position: relative; 
 		right: 40vw;
 		img{
-			width: 40vw;
-			// height: 800px;
-			// width: auto;
+			height: 600px; 
+			width: auto;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
-
+	}
+	img{
+		width: 100%;
+		margin-top: 4em;
+		margin-bottom: 2em;
 	}
 	blockquote{
 		padding-left: 2rem;
 		border-left: 2px solid $colourTwo;
 	}
-}
-
-section.background1{
-	background: linear-gradient(to top, #eee, #fff);
-}
-
-section.background2{
-	background: linear-gradient(to top, #eee, #fff);
+	.colour{
+		color: $colourTwo;
+	}
 }
 
 /**************************************************** MOBILE */
@@ -227,20 +247,36 @@ section.background2{
 		p{
 			width: 100%;
 			padding-right: 0px;
+			font-size: 40px;
+			line-height: 54px;
+		}
+		p.caption{
+			position: relative;
+			left: 0;
+			text-align: center;
+			font-size: 20px;
+			line-height: 34px;
+			width: 80vw;
+
+			// display: inline-block;
 		}
 		h2{
 			position: relative;
 			left: 0px;
 			text-align: left;
 			width: 100%;
+			font-size: 4rem;
+			border-top: 6px solid $colourTwo;
 		}
 		.images{
+			margin-top: 100px;
 			left: -10vw; 
 			img{
 				width: 80vw;
+				height: auto;
 			}
-
 		}
+
 	}
 }
 
@@ -282,6 +318,12 @@ section.background2{
 		p{
 			width: 100%;
 			padding-right: 0px;
+		}
+		p.caption{
+			position: relative;
+			text-align: center;
+			left: 0px;
+			width: 80vw;
 		}
 		h2{
 			position: relative;

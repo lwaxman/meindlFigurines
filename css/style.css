@@ -30,7 +30,11 @@ p {
   font-family: "Paragraph";
   font-size: 1.8em;
   letter-spacing: 0.03em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.5rem; }
+
+p.caption {
+  line-height: 1.2rem; }
 
 img {
   width: 120%;
@@ -38,7 +42,6 @@ img {
 
 /******************************************************************/
 header {
-  background: #999;
   width: 100%;
   height: 100%;
   color: #0059D4; }
@@ -50,18 +53,16 @@ header {
       width: 50%;
       overflow: hidden; }
     header .background .leftImage {
+      background: url(../images/header/texture.jpg);
+      background-size: 100%;
       text-align: right; }
-      header .background .leftImage img {
-        opacity: 0.8; }
     header .background .rightImage {
       background: #0059D4;
       text-align: left; }
       header .background .rightImage img {
-        opacity: 0.5; }
+        opacity: 0.4; }
     header .background img {
       height: 100vh;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
       width: auto;
       text-align: center;
       vertical-align: center; }
@@ -98,7 +99,8 @@ header {
 section {
   display: inline-block;
   width: 100%;
-  padding: 4rem 0 5rem 0; }
+  padding: 4rem 0 5rem 0;
+  background: linear-gradient(to top, #eee, #fff); }
   section .content {
     width: 60vw; }
   section .alignRight {
@@ -106,6 +108,22 @@ section {
     left: 40vw; }
     section .alignRight p {
       padding-right: 150px; }
+      section .alignRight p a {
+        text-decoration: none;
+        border-bottom: 1px solid #0059D4;
+        color: #0059D4; }
+      section .alignRight p a:hover {
+        background: #FFCE00; }
+    section .alignRight p.caption {
+      position: absolute;
+      text-align: right;
+      left: -30vw;
+      width: 28vw;
+      padding-right: 0px;
+      color: #0059D4;
+      font-size: 1.4em;
+      margin-top: 1em;
+      margin-bottom: 3em; }
     section .alignRight h2 {
       border-top: 3px solid #0059D4;
       position: absolute;
@@ -117,21 +135,24 @@ section {
       margin-right: 2rem; }
   section .images {
     text-align: center;
-    padding: 2rem 0 1rem 0;
+    margin: 2rem 0 0rem 0;
     width: 100vw;
     position: relative;
     right: 40vw; }
     section .images img {
-      width: 40vw; }
+      height: 600px;
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 0; }
+  section img {
+    width: 100%;
+    margin-top: 4em;
+    margin-bottom: 2em; }
   section blockquote {
     padding-left: 2rem;
     border-left: 2px solid #0059D4; }
-
-section.background1 {
-  background: linear-gradient(to top, #eee, #fff); }
-
-section.background2 {
-  background: linear-gradient(to top, #eee, #fff); }
+  section .colour {
+    color: #0059D4; }
 
 /**************************************************** MOBILE */
 @media only screen and (max-device-width: 480px) {
@@ -163,16 +184,29 @@ section.background2 {
     left: 10vw; }
     section .content p {
       width: 100%;
-      padding-right: 0px; }
+      padding-right: 0px;
+      font-size: 40px;
+      line-height: 54px; }
+    section .content p.caption {
+      position: relative;
+      left: 0;
+      text-align: center;
+      font-size: 20px;
+      line-height: 34px;
+      width: 80vw; }
     section .content h2 {
       position: relative;
       left: 0px;
       text-align: left;
-      width: 100%; }
+      width: 100%;
+      font-size: 4rem;
+      border-top: 6px solid #0059D4; }
     section .content .images {
+      margin-top: 100px;
       left: -10vw; }
       section .content .images img {
-        width: 80vw; } }
+        width: 80vw;
+        height: auto; } }
 /**************************************************** SMALLER SCREENS */
 @media only screen and (max-width: 900px) {
   header .background .leftImage {
@@ -200,6 +234,11 @@ section.background2 {
     section .content p {
       width: 100%;
       padding-right: 0px; }
+    section .content p.caption {
+      position: relative;
+      text-align: center;
+      left: 0px;
+      width: 80vw; }
     section .content h2 {
       position: relative;
       left: 0px;
